@@ -1,0 +1,59 @@
+GDB TRICKS
+
+gdb --args
+    Normally, gdb takes arguments you give it and assumes they are for itself.
+    Using --args passes them to the program
+
+thead apply all bt
+    Dump a backtrace for all threads. It's very useful
+
+gdb --batch --ex r --ex bt --ex q --args
+    Run the program so that if it bombs, you get a backtrace
+
+GDB QUICK REFERENCE
+
+run [args]
+    Start your program with [args]
+
+break [file:]function 
+    Set a breakpoint at [file:]function. (b)
+
+backtrace
+    Dump a backtrace of the current calling stack. (bt)
+
+print expr
+    Print the value of expr. (p)
+
+continue
+    Continue running the program
+
+next
+    Next line, but step over function calls. (n)
+
+step    
+    Next line, but step into function calls. (s)
+
+quit
+    Exit GDB
+
+help
+
+cd, pwd, make
+
+shell
+    Quickly start a shell so you can do other things
+
+clear
+    Clear a breakpoint
+
+info break, info watch
+    Show information about breakpoints and watchpoints
+
+attach pid 
+    Attach to a runnig process so you can debug it
+
+detach
+    Detach from the process
+
+list 
+    List out the next ten source lines. Add a - to list the previous ten lines
