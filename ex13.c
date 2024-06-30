@@ -10,8 +10,8 @@ int main(int argc, char *argv[]) {
 
     int num_states = 5;
 
-    char tmp[] = "ass";
-    tmp[0] = *states[0];
+    char *tmp;
+    tmp = states[0];
     states[0] = argv[1]; 
     argv[1] = tmp;
 
