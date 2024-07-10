@@ -15,10 +15,8 @@ struct Person {
 
 // returns a pointer to a new person struct
 struct Person *Person_create(char *name, int age, int height, int weight)
-{
-    struct Person *who = malloc(sizeof(struct Person));
-    assert(who != NULL);
-
+{ 
+    struct Person *who = malloc(sizeof(struct Person));assert(who != NULL);
     // duplicates name from function call to struct to make sure that this structure actually owns it
     who->name = strdup(name);
     who->age = age;
